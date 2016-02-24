@@ -1,0 +1,45 @@
+.col-1, .col-2, .col-3 {
+	float: left;
+}
+
+.col-1 {
+	width: 30%;
+	padding: 0 5% 0 2.5%;
+}
+
+.col-2, .col-3 {
+	width: 30%;
+	padding: 0 2.5%;
+}
+
+.homepage_content {
+
+	padding: 4rem 0;
+	h2 {
+		font-size: 1rem;
+	}
+
+	h3 {
+		font-size: 1.25em;
+		font-weight: 400;
+		margin-bottom: .5em;
+	}
+
+	hr {
+		width: 5em;
+		display: block;
+		height: 2px;
+		border: 0;
+		border-top: 2px solid #8bc6db;
+		margin: 2rem 0;
+	}
+	.date {
+		font-size: 0.85em;
+		margin-bottom: 2em;
+		color: #9a9da4;
+	}
+	p {
+		margin: 0 0 0.75em 0;
+	}
+		
+}

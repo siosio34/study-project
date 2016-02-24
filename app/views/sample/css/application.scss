@@ -1,0 +1,71 @@
+$dark: #426252;
+$light: #9a9da4;
+$hightlight: #8bc6db;
+@import 'normalize';
+@import 'welcome';
+/*
+i HTML 문서 구조에서 부모 요소가 자식 요소를 감싸고 있을 때, 자식 요소에게 float 형식을 적용하면 부모 요소가 자식 요소를 더 이상 감싸지 않게되고 높이 값을 파악하지 못하게 되는 버그가 발생합니다. 따라서 부모 요소의 높이 값이 0px로 출력되고, 전체적인 HTML 요소들이 뒤엉켜버리는 경우가 많습니다. 
+
+
+
+ 이 때 부모 요소가 다시 자식 요소를 감쌀 수 있게 float을 초기화(clear) 하여 버그를 고쳐주는(fix) 코드가 필요한데 이것을 clearfix라고 합니다.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+ 
+.clearfix:after {
+    clear: both;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+ 
+#main_navigation {
+	padding: 2.5em 5%; /* 상하 좌우 */
+	border-bottom: 1px solid $dark;
+	.name {
+		font-weight: 700; 
+		font-size: .7em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid #e9e9e9;
+		padding: 0.75em 1rem;
+		text-decoration: none;
+		color: $dark;
+		float :left;
+	}
+	nav {
+		float: right;
+		a {
+			color: $dark;
+			text-decoration: none;
+			margin: 0 1rem;
+			font-size: 1rem;
+		}
+	}
+}
+/* 웹 문서의 경우 기본글꼴 % 그외 css 작성은 em 을 사용할것을 권장한다 */
+/* 1em -> 12pt */
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+h1, h2 , h3 , h4, h5, h6, p, ul, li {
+	color: $dark;
+}
+
+p, li {
+	font-size: 1.1rem;
+	line-height: 1.75;
+}
+
